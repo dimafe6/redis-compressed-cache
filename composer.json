@@ -1,0 +1,43 @@
+{
+    "name": "dimafe6/redis-compressed-cache",
+    "description": "Laravel cache driver with compression.",
+    "keywords": [
+        "dimafe6",
+        "laravel",
+        "Redis",
+        "Cache",
+        "redis-compressed-cache"
+    ],
+    "homepage": "https://github.com/dimafe6/redis-compressed-cache",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmytro Feshchenko",
+            "email": "dimafe2000@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "ext-mbstring": "*",
+        "ext-zlib": "*",
+        "spatie/laravel-package-tools": "^1.13"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dimafe6\\RedisCompressedCache\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dimafe6\\RedisCompressedCache\\RedisCompressedCacheServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
