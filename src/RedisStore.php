@@ -77,7 +77,10 @@ class RedisStore extends IlluminateRedisStore
     {
         $value = parent::serialize($value);
 
-        return $this->isNeedCompression($value) ? gzcompress($value, 9) : $value;
+        return $this->isNeedCompression($value) ? gzcompress(
+            $value,
+            config('redis-compressed-cache.compression_level')
+        ) : $value;
     }
 
     /**

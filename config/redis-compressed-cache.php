@@ -45,4 +45,15 @@ return [
     */
 
     'enabled' => env('REDIS_COMPRESSED_CACHE_ENABLED', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Compression level
+    |--------------------------------------------------------------------------
+    |
+    | Set compression level from 0(without compression) to 9(max compression).
+    |
+    */
+
+    'compression_level' => env('REDIS_COMPRESSED_CACHE_COMPRESSION_LEVEL', 9),
 ];
